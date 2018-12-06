@@ -37,7 +37,7 @@ def collections():
         return render_template('success.html')
     return render_template('home.html')    
 
-@app.route('/return_emails', methods=['GET'])
+@app.route('/return_email#', methods=['GET'])
 def return_emails():
     all_emails = db.session.query(User.email).all()
     return jsonify(all_emails)    
